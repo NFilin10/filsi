@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'main/css/header_footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/kontakt.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/feedback.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Farro:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <div class="header_body">
+            <a href="{% url 'home' %}" class="header_logo" ><img class="logopic" src="{% static 'main/img/new_logo_v2.png' %}" alt=""></a>
+            <div class="header_burger">
+              <span></span>
+            </div>
+            <nav class="header_menu">
+              <ul class="header_list">
+                  <li><a href="/teenused" class="header_link">Teenused</a></li>
+                  <li><a href="{% url 'kontakt' %}" class="header_link">Kontakt</a></li>
+                  <li><a href="{% url 'feedback' %}" class="header_link">Tagasiside</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </header>
+
+  {% block content %}
+  {% endblock %}  
+
+  <footer>
+    <div class="footer-container">
+      <img class="footer-logo" src="{% static 'main/img/new_logo_v2.png' %}" alt="">
+      <p>Suur-Männiku 8, 11111 Tallinn, Estonia</p>
+      <p>Telefon: +372 00000000</p>
+      <p>E-post: info@info.com</p>
+    </div>
+    
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    
+    
+     
+    
+</body>
+</html>
+
+
+
+
+

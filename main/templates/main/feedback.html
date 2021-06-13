@@ -1,0 +1,43 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}Tagasiside{% endblock %}
+
+{% block  content %}
+    <div class="feedback-container">
+        <div class="feedback-block">
+            <div class="kontakt-header">
+                <h1>Tagasiside</h1>
+            </div>
+            <form action="{% url 'feedback' %}" method="POST">
+                {% csrf_token %}
+                <div class="feedback_data">
+                    <table class="fb-table">
+                        <tbody>
+                            <tr>
+                                <td class="ur_name">Nimi:</td>
+                                <td><input class="name" type="text" name="message-name" placeholder="Teie nimi"></td>
+                            </tr>
+                            <tr>
+                                <td class="email_header">Email:</td>
+                                <td class="email_header"><input class="email" type="text" name="message-email" placeholder="Teie Email"></td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+                <div class="feedback_text">
+                    <p>Tagasiside:</p>
+                    <textarea class="msg" name="message" placeholder="Teie sõnum"></textarea>
+                </div>
+                <button type="submit" class="send_msg">Saada</button>
+                <h1>{{ notification }}</h1>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}

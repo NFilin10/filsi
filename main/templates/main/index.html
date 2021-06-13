@@ -1,0 +1,235 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}Main page{% endblock %}
+
+{% block  content %}
+    <div class="full-wrapper1">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide" id="slide1" >
+                    <img src="https://afrialliance.org/files/styles/header_image/public/images/2020-03/karsten-wurth-0w-uTa0Xz7w-unsplash.jpg?itok=kikyzK4q" alt="">
+                    <div class="box">
+                        <div class="main-header">
+                            {% for el in slider_content1 %}
+                                <p>{{ el.title }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="main-text">
+                            {% for el in slider_content1 %}
+                                <p>{{ el.slider_content }}</p>
+                             {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" id="slide2" >
+                    <img src="{% static 'main/img/1slide.jpg' %}" alt="">
+                    <div class="box">
+                        <div class="main-header">
+                            {% for el in slider_content2 %}
+                                <p>{{ el.title }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="main-text">
+                            {% for el in slider_content2 %}
+                                <p>{{ el.slider_content }}</p>
+                             {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" id="slide3" >
+                    <img class="slide33" src="{% static 'main/img/2slide.jpg' %}" alt="">
+                    <div class="box">
+                        <div class="main-header">
+                            {% for el in slider_content3 %}
+                                <p>{{ el.title }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="main-text">
+                            {% for el in slider_content3 %}
+                                <p>{{ el.slider_content }}</p>
+                             {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" id="slide4" >
+                    <img src="{% static 'main/img/3slide.jpg' %}" alt="">
+                    <div class="box">
+                        <div class="main-header">
+                            {% for el in slider_content4 %}
+                                <p>{{ el.title }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="main-text">
+                            {% for el in slider_content4 %}
+                                <p>{{ el.slider_content }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    
+        <section class="about">
+            <div class="about-top">
+                <div class="text-top">
+                    {% for el in about %}
+                        <h1 class="header-top">{{ el.title1 }}</h1>
+                        <p class="text-top">{{ el.about_content1 }}</p>
+                    {% endfor %}
+                </div>
+                <img class="photo-top" src="{% static 'main/img/section2_1.png' %}" alt="">
+            </div>
+        </section>
+
+        <section class="about1">
+            <div class="about-bottom">
+                <img class="photo-bottom" src="{% static 'main/img/section2_2.png' %}" alt="">
+                <div class="text-bottom">
+                    {% for el in about %}
+                        <h1 class="header-bottom">{{ el.title2 }}</h1>
+                        <p class="text-bottom">{{ el.about_content2 }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <div class="objects">
+            <div class="header-objects">
+                <h1>Tehtud töö</h1>
+            </div>
+            <div class="photos">
+                <div class="photoss">
+                    <div class="object-name">
+                        <p>BalticAgro</p>
+                    </div>
+                    <a href=""><img src="{% static 'main/img/BalticAgro.jpg' %}" alt=""></a>
+                </div>
+            
+                <div class="photoss">
+                    <div class="object-name">
+                        <p>Eesti Traat</p>
+                    </div>
+                    <a href=""><img src="{% static 'main/img/Eesti Traat.jpg' %}" alt=""></a>
+                </div>
+
+                <div class="photoss">
+                    <div class="object-name">
+                        <p>Eesti Traat</p>
+                    </div>
+                    <a href=""><img src="{% static 'main/img/eesti_traat.jpg' %}" alt=""></a>
+                </div>
+
+                <div class="photoss">
+                    <div class="object-name">
+                        <p>Magaziin</p>
+                    </div>
+                    <a href=""><img src="{% static 'main/img/magaziin.jpg' %}" alt=""></a>
+                </div>
+            </div>
+
+            <div class="photos-low">
+                <div class="photoss">
+                    <div class="object-name">
+                        <p>BLRT</p>
+                    </div>
+                    <a href=""><img src="{% static 'main/img/BLRT.jpg' %}" alt=""></a>
+                </div>
+
+                <div class="photoss">
+                    <div class="object-name">
+                        <p>Kakumae Haven</p>
+                    </div>
+                    <a href=""><img src="{% static 'main/img/Kakumae Haven.jpg' %}" alt=""></a>
+                </div>
+
+                <div class="photoss">
+                    <div class="object-name">
+                        <p>Module Tech</p>
+                    </div>
+                    <a href=""><img src="{% static 'main/img/object1.png' %}" alt=""></a>
+                </div>
+
+                <div class="photoss">
+                    <div class="object-name">
+                        <p>Module Tech</p>
+                    </div>
+                    <a href=""><img src="{% static 'main/img/object1.png' %}" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="teenused">
+            <h1 class="meie-teenused">Meie teenused</h1>
+            <div class="teenused-foto">
+                <div class="teenus">
+                    <img class="firstpic" src="{% static 'main/img/proekteerimine.jpg' %}" alt="">
+                    <div class="gej"><h1 >Projekteerimine</h1> </div>
+                </div>
+                <div class="teenus">
+                    <img src="{% static 'main/img/Ehitamine.jpg' %}" alt="">
+                    <h1>Ehitamine</h1>
+                </div>
+                <div class="teenus">
+                    <img src="{% static 'main/img/Hooldus.jpg' %}" alt="">
+                    <h1>Hooldus</h1>
+                </div>
+                <div class="teenus">
+                    <img src="{% static 'main/img/Käit.jpg' %}" alt="">
+                    <h1>Käit</h1>
+                </div>
+            </div>
+            <div class="read-more1">
+                <a href="">Loe lähemalt</a>
+            </div>
+        </div>
+
+        <div class="read-more">
+            <a href="">Loe lähemalt</a>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{% static 'main/js/burger_menu.js' %}"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <script>
+            const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            
+            loop: true,
+            
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+            speed: 850
+            });
+        </script>
+    </div>
+{% endblock %}
+
+

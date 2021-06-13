@@ -1,0 +1,68 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block  content %}
+<div class="full-wrapper">
+  <div class="full-block">
+    <div class="contact-block">
+      <div class="kontakt-header">
+        <h1>Kontakt</h1>
+      </div>
+
+      <div class="tables">
+        {% for el in kontakt %}
+          <table class="direktor" >
+            <tbody>
+              <tr>
+                <td class="dir-name">{{ el.name }}</td>
+              </tr>
+              <tr>
+                <td class="amet"> <strong>Ametikoht</strong></td>
+                <td class="amet">{{ el.position }}</td>
+              </tr>
+              <tr>
+                <td> <strong>E-post</strong></td>
+                <td>{{ el.email }}</td>
+              </tr>
+              <tr>
+                <td> <strong>Telefon</strong></td>
+                <td>{{ el.telefon }}</td>
+              </tr>
+              <tr>
+                <td> <strong>Teine telefon</strong></td>
+                <td>{{ el.second_telefon }}</td>
+              </tr>
+            </tbody>
+          </table>
+        {% endfor %}
+
+      </div>
+      <div class="bottom-info">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td class="firm-name">Filsi OÜ</td>
+            </tr>
+            <tr>
+              <td class="amet"><strong>Aadress</strong></td>
+              <td class="amet">Suur-Männiku 8</td>
+            </tr>
+            <tr>
+              <td> <strong>Postiindeks</strong></td>
+              <td>Tallinn 11216, Eesti</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2032.8255437278058!2d24.71403861607393!3d59.36925048167288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692953634c975d5%3A0x771299686bc3b0cb!2sSuur-M%C3%A4nniku%208%2C%20N%C3%B5mme%20linnaosa%2C%20N%C3%B5mme%2C%2011216%20Harju%20maakond!5e0!3m2!1sru!2see!4v1621261987339!5m2!1sru!2see" width="450" height="550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{% static 'main/js/burger_menu.js' %}"></script>
+{% endblock %}
