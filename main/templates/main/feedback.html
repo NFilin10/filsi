@@ -7,7 +7,7 @@
 {% block  content %}
     <div class="feedback-container">
         <div class="feedback-block">
-            <div class="kontakt-header">
+            <div class="tagasiside-header">
                 <h1>Tagasiside</h1>
             </div>
             <form action="{% url 'feedback' %}" method="POST">
@@ -36,7 +36,8 @@
         </div>
     </div>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'main/js/burger_menu.js' %}"></script>
 
 
 

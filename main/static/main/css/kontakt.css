@@ -23,6 +23,7 @@ body{
     width: 1450px;
     height: 700px;
     background-color: #ededed;
+    box-shadow: 0 0 8px 7px #ddd;
 }
 
 .map {
@@ -116,9 +117,17 @@ td{
 
     }
 
+    .kontakt-header{
+        padding-left: 10px;
+    }
+
     .projektijuht{
         margin-left: 22px;
 
+    }
+
+    .direktor, .table{
+        margin-left: 10px;
     }
 
     .bottom-info{
